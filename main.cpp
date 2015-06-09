@@ -17,12 +17,21 @@ int main(int argc, const char* argv[]) {
 	bh.Insert(3);
 	bh.Insert(7);
 	bh.Insert(12);
-	std::cout << "bh is ";
+	std::cout << std::setw(30) << "bh is ";
 	bh.Display();
+	bh.Sort();
+	std::cout << std::setw(30) << "sorted bh is : ";
+	bh.Display();
+	std::cout << std::endl << std::endl;
 
 	int arr[5] = {1, 2, 3, 4, 5};
+	std::cout << std::setw(30) << "arr is : ";
 	PrintArray(arr);
 	BinaryHeap<int> bt2(arr, 5);
+	std::cout << std::setw(30) << "bt2 is : ";
+	bt2.Display();
+	bt2.Sort();
+	std::cout << std::setw(30) << "sorted bt2 is : ";
 	bt2.Display();
 
 	return 0;

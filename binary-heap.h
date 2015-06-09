@@ -17,6 +17,7 @@ public:
 	void Insert(T data);
 	T Delete();
 	void Display();
+	void Sort();
 
     inline int GetParentIndex(int index);
     inline int GetLeftChild(int index);
@@ -218,6 +219,19 @@ void BinaryHeap<T>::Display() {
 	}
 	std::cout << std::endl;
 }
+
+template <typename T>
+void BinaryHeap<T>::Sort() {
+
+	int originalSize = size;
+	for(int i = (size - 1); i >= 0; --i) {
+		std::swap(backingArr[i], backingArr[0]);
+		--size;
+		HeapifyDown(0);
+	}	
+	size = originalSize;
+}
+
 
 template <typename T>
 int BinaryHeap<T>::GetParentIndex(int index) {
