@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-c -Wall -std=c++11 -g
 LDFLAGS=
 SOURCES=main.cpp
-HEADERS=binary-heap.h utils.h
+HEADERS=binary-heap.h utils.h graph.h
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=dsa.exe
 
